@@ -45,7 +45,7 @@ const config = {
 
       // 有 compilerOptions 的放**前**面会两个 vue 文件都会执行 postTransformNode
       // 有 compilerOptions 的放**后**面会两个 vue 文件都不会执行 postTransformNode
-      // 感觉有点奇怪，loader 是 compose 的，后面的应该先执行才对，所以上面的结论应该反过来才对。。
+      // 感觉有点奇怪，loader 是 compose 的，后面的应该先执行才对，所以即便 vue-loader 处理 compilerOptions 有 bug 上面的结论也应该反过来才对？
       {
         test: /\.vue$/,
         use: [
